@@ -1,0 +1,163 @@
+$primary-color: #1778d7;
+$primary-dark-color: #005a9e;
+$chevron-color: #465efc;
+$gray-color: #f4f4f4;
+$search-color: #c3dcf7;
+$text-color: #34373d;
+$form-color: #c3dcf7;
+$white-color: #ffffff;
+$icon-color: #767678;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe", "Segoe UI", "Arial", "sans-serif";
+}
+
+.navbar {
+  width: 100%;
+  height: 3rem;
+  background-color: $primary-color;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #ffffff;
+
+  .navbar-item {
+    display: flex;
+    align-items: center;
+
+    .navbar-item-icons {
+      width: 3rem;
+      height: 3rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: background-color 0.467s cubic-bezier(0.1, 0.9, 0.2, 1) 0.034s;
+    }
+
+    .navbar-item-icons:hover {
+      background-color: $primary-dark-color;
+    }
+
+    .navbar-item-logo {
+      padding: 0 12px 0 8px;
+    }
+
+    .navbar-item-search {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      form {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 2rem;
+        width: 400px;
+        background-color: $form-color;
+        border-radius: 0.25rem;
+        padding: 0 8px;
+        cursor: pointer;
+
+        span.material-icons {
+          color: $primary-color;
+        }
+
+        input {
+          height: 100%;
+          font-size: 14px;
+          margin-left: 8px;
+          border: none;
+          background-color: inherit;
+          width: 100%;
+          cursor: pointer;
+        }
+        input:focus {
+          outline: none;
+        }
+      }
+    }
+  }
+}
+
+.content-container {
+  display: flex;
+
+  .sidebar {
+    height: calc(100vh - 3rem);
+    background-color: $gray-color;
+    transition: ease 600ms;
+
+    .sidebar-items {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+
+      .sidebar-header {
+        height: 48px;
+        margin: 12px 0;
+        display: flex;
+        align-items: center;
+        padding: 0 8px;
+
+        .sidebar-button {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 32px;
+          height: 32px;
+
+          .material-icons {
+            font-size: 32px;
+            color: $chevron-color;
+            cursor: pointer;
+          }
+        }
+
+        .sidebar-button:hover {
+          background-color: $white-color;
+        }
+      }
+
+      ul {
+        li {
+          display: flex;
+          align-items: center;
+          color: $text-color;
+          width: 100%;
+          height: 36px;
+          font-size: 14px;
+          padding: 0 15px;
+          cursor: pointer;
+
+          a {
+            display: flex;
+            align-items: center;
+            color: $text-color;
+            text-decoration: none;
+
+            span.material-icons {
+              margin-right: 15px;
+              font-size: 20px;
+              color: $icon-color;
+            }
+
+            span.text {
+              transition: opacity 800px;
+            }
+          }
+        }
+        li:hover {
+          background-color: $white-color;
+        }
+      }
+    }
+  }
+
+  .content {
+    // width: 100%;
+    // background-color: black;
+  }
+}
